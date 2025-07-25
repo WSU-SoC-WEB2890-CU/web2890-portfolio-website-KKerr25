@@ -1,3 +1,576 @@
 /* Your styles go here */
 @import "bootstrap/scss/bootstrap.scss";
 @import "bootstrap-icons/font/bootstrap-icons.css";
+
+$color-primary: #2c3e50; // Charcoal Blue
+$color-accent: #e67e22; // Burnt Orange
+$color-background: #f4f4f4; // light grey
+$color-text: #4b4b4b; // grey
+$color-highlight: #5da4a9; // teal
+$color-border: #1c1c1c; // graphite
+
+html {
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: $color-background;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: $color-border;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+}
+
+.nav-Header {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: $color-highlight;
+  margin: 0;
+  padding: 0.25rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  white-space: nowrap;
+  font-family: "Segoe UI", sans-serif;
+
+  border-bottom: 2px solid rgba($color-highlight, 0.2);
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  margin: 0rem 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links-text {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem; // spacing between icon and text
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  font-size: 1.25rem;
+  color: $color-background;
+  font-family: inherit;
+  line-height: 1;
+  transition: color 0.3s ease;
+
+  a {
+    margin: 0;
+    text-decoration: none;
+    color: $color-background;
+  }
+
+  svg,
+  i {
+    display: block;
+    font-size: 1rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 0%;
+    background-color: rgba($color-accent, 0.5) !important;
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 60%;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.image-header {
+  margin-top: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.profile-image {
+  display: block;
+  width: 80vw;
+  height: auto;
+  max-height: 100vh;
+  box-shadow: 2px 7px 10px rgba(0, 0, 0);
+}
+.overlay-text {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+  z-index: 2;
+}
+
+.name-tag {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.desc-tag {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.Previous-digital {
+  height: auto;
+  display: flex;
+  margin: 4em 0;
+  flex-direction: column !important;
+  padding: 6rem 2rem;
+  background-color: $color-text;
+  font-family: "Segoe UI", sans-serif;
+
+  h2 {
+    font-size: 2.25rem;
+    color: $color-highlight;
+    text-align: center;
+    margin-bottom: 3rem;
+    border-bottom: 3px solid rgba($color-highlight, 0.3);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+  }
+
+  .flexbox-digital {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .digital-content {
+    background-color: $color-border;
+    border-radius: 1rem;
+    box-shadow: 0 0 14px rgba($color-primary, 0.15);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 20px rgba($color-primary, 0.3);
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      color: $color-highlight;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid rgba($color-highlight, 0.2);
+      padding-bottom: 0.25rem;
+    }
+
+    img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    p {
+      font-size: 1rem;
+      color: $color-background;
+      line-height: 1.6;
+      margin-bottom: 0.75rem;
+    }
+  }
+}
+
+.Case-study {
+  margin: auto;
+  padding: 4rem 0;
+  h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.25rem;
+    color: $color-highlight;
+    text-align: center;
+    margin-bottom: 3rem;
+    border-bottom: 3px solid rgba($color-highlight, 0.3);
+
+    padding-bottom: 0.5rem;
+  }
+  img {
+    max-width: 1300px;
+    border-radius: 8px;
+  }
+}
+
+.Overview-Previous {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-text;
+  color: $color-highlight;
+  font-size: 2.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 4px 4px 10px $color-primary;
+  font-family: "Segoe UI", sans-serif;
+  max-width: 1500px;
+  margin-left: 6rem;
+  padding: 2.5rem 2rem;
+  margin-top: 1.5rem;
+}
+
+.Overview-Previous-Header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 2px solid $color-highlight;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 2.5rem !important;
+
+  h3 {
+    color: $color-highlight;
+    font-size: 1.75rem;
+    margin: 0;
+    margin-left: 1rem;
+  }
+}
+
+.Portfolio-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 3rem;
+  text-align: center;
+
+  a.icon-button {
+    position: relative;
+    height: 200px;
+    padding: 7rem;
+    background-color: $color-background;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+
+    &:hover {
+      background-color: rgba(30, 30, 30, 0.25);
+    }
+
+    i {
+      font-size: 5rem;
+      color: $color-accent;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.3s ease;
+      z-index: 1;
+    }
+
+    .icon-button-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      opacity: 0;
+      z-index: 2;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    &:hover .icon-button-text {
+      opacity: 1;
+    }
+
+    &:hover i {
+      opacity: 0.2;
+    }
+  }
+}
+
+.divider {
+  height: 3px;
+  background: linear-gradient(to right, transparent, $color-highlight, transparent);
+  margin: 6rem 0;
+  border-radius: 2px;
+  padding: 0 0.5rem;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  i {
+    margin: auto;
+  }
+  .bi-cpu {
+    color: $color-highlight;
+    font-size: 10rem;
+  }
+
+  .bi-tools {
+    color: $color-accent;
+    font-size: 10rem;
+  }
+}
+
+.Overview-Career {
+  background-color: $color-text;
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px $color-border;
+  font-family: "Segoe UI", sans-serif;
+  max-width: 900px;
+  margin-right: 6rem;
+  margin-left: auto;
+  margin-bottom: 4rem;
+  transition: all 0.3s ease;
+
+  img {
+    max-width: 150px;
+  }
+
+  h3 {
+    font-size: 2rem;
+    color: $color-highlight;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid $color-highlight;
+    padding-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+  }
+
+  .Overview-text {
+    p {
+      font-size: 1.1rem;
+      color: $color-background;
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+      margin: 1rem;
+    }
+  }
+}
+
+.Overview-details {
+  display: flex;
+  flex-direction: row;
+
+  img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 1rem;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  background-color: $color-border;
+  color: #5da4a9;
+
+  p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  img {
+    max-width: 100px;
+    padding: 1.5rem;
+    margin-left: auto;
+    margin: 0;
+
+    &:hover {
+      cursor: pointer;
+      padding: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  .nav,
+  .nav-links,
+  .nav-links-text,
+  .image-header,
+  .profile-image,
+  .overlay-text,
+  .Previous-digital,
+  .flexbox-digital,
+  .digital-content,
+  .Case-study,
+  .Overview-Previous,
+  .Overview-Previous-Header,
+  .Portfolio-images,
+  .Overview-Career,
+  .Overview-details,
+  footer {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+  }
+
+  footer {
+    padding: 1rem;
+    flex-direction: column;
+
+    img {
+      max-width: 80px;
+      padding: 1rem;
+    }
+  }
+
+  .profile-image {
+    margin-top: 3rem;
+  }
+
+  .overlay-text {
+    font-size: 1rem;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+  }
+
+  .name-tag {
+    font-size: 1rem;
+  }
+
+  .desc-tag {
+    font-size: 0.75rem;
+  }
+
+  .flex-row {
+    display: flex;
+    flex-direction: column !important;
+    i {
+      margin: auto;
+    }
+    .bi-cpu {
+      color: $color-highlight;
+      font-size: 10rem;
+    }
+
+    .bi-tools {
+      color: $color-accent;
+      font-size: 10rem;
+    }
+  }
+
+  .flexbox-digital {
+    flex-direction: column !important;
+    gap: 2rem;
+  }
+
+  .Portfolio-images {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    a.icon-button {
+      padding: 3rem;
+      height: auto;
+      background-color: rgba(30, 30, 30, 0.25);
+
+      i {
+        font-size: 3rem;
+      }
+
+      .icon-button-text {
+        opacity: 1;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .Overview-Previous {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .Overview-Previous-Header {
+    flex-direction: column;
+    text-align: center;
+
+    h3 {
+      margin: 0.5rem 0;
+    }
+  }
+
+  .Overview-details {
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .Overview-Career {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+
+    img {
+      margin: 0.75rem auto;
+    }
+  }
+}
