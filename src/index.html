@@ -1,28 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Portfolio website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index,follow" />
+    <meta name="Konard-Kerr's Portfolio" content="Portfolio website ..." />
 
-<head>
-  <meta charset="utf-8">
-  <title>Portfolio website</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="index,follow">
-  <meta name="description" content="TODO: Portfolio website ...">
+    <link rel="stylesheet" href="./stylesheets/main.scss" />
+  </head>
+  <header>
+    <div class="nav">
+      <h3 class="nav-Header">Konrad's Portfolio</h3>
+      <div class="nav-links">
+        <a href="index.html">
+          <div class="nav-links-text">
+            <span class="bi bi-house-fill"></span>
+            <a>Home</a>
+          </div>
+        </a>
 
-  <link rel="stylesheet" href="./stylesheets/main.scss">
-</head>
+        <div class="nav-links-text">
+          <i class="bi bi-person-circle"></i>
+          <a href="pages/about.html">About Me</a>
+        </div>
 
-<body>
-  <!-- Your HTML goes here -->
-  <h1 class="display-2 text-center my-5 py-5">
-    <span class="d-block py-5 mt-5">
-      <i class="bi bi-filetype-html text-primary"></i> / 
-      <i class="bi bi-filetype-css text-danger"></i> / 
-      <i class="bi bi-filetype-js text-success"></i>
-    </span>
-    
-    Portfolio Website
-  </h1>
+        <div class="nav-links-text">
+          <i class="bi bi-chat-dots"></i>
+          <a href="./pages/contact.html">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </header>
 
-  <script type="module" src="./javascripts/main.js"></script>
-</body>
+  <body>
+    <header class="image-header">
+      <div class="overlay-text">
+        <p class="name-tag">Konrad Kerr</p>
+        <p class="desc-tag">Full Stack Coder | Construction Foreman | Full Time Student</p>
+      </div>
+      <img src="images/me.jpg" alt="Photo of Konrad Kerr" class="profile-image" />
+    </header>
+
+    <div class="Previous-digital">
+      <h2>Previous Digital Work</h2>
+      <div class="flexbox-digital">
+        <div class="digital-content">
+          <h3>Anchor Retaining Walls</h3>
+          <img src="images/snip3.PNG" alt="" />
+          <p>Custom Styling</p>
+          <p>Responsive Multi-page Professional Webiste</p>
+          <p>Built from Scratch</p>
+        </div>
+        <div class="digital-content">
+          <h3>Car Sales Place</h3>
+          <img src="images/snip2.PNG" alt="" />
+          <p>Bootstrap Framework</p>
+          <p>Responsive Single-page Proffesional Website</p>
+          <p>Class Project</p>
+        </div>
+      </div>
+      <div class="Case-study">
+        <h3>Anchor Retaining Walls: Case Study</h3>
+        <img src="images/Mockup.png" alt="" />
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="Overview-Previous">
+        <div class="Overview-Previous-Header">
+          <h3>Browse My Completed Digital Work</h3>
+        </div>
+
+        <div class="Portfolio-images">
+          <a href="https://gleeful-torte-cce82d.netlify.app/" class="icon-button">
+            <i class="bi bi-car-front"></i>
+            <span class="icon-button-text">Care Sales Place</span>
+          </a>
+
+          <a href="https://playful-seahorse-82a3c8.netlify.app/" class="icon-button">
+            <i class="bi bi-universal-access"></i>
+            <span class="icon-button-text">Acessible Site</span>
+          </a>
+          <a href="https://anchor-retaining-walls.netlify.app/" class="icon-button">
+            <i class="bi bi-cone-striped"></i>
+            <span class="icon-button-text">Anchor Retaining Walls</span>
+          </a>
+          <a href="https://phenomenal-klepon-e25b3c.netlify.app/" class="icon-button">
+            <i class="bi bi-cake-fill"></i>
+            <span class="icon-button-text">Recipe Page</span>
+          </a>
+          <a href="https://prismatic-faun-5d44d6.netlify.app/" class="icon-button">
+            <i class="bi bi-joystick"></i>
+            <span class="icon-button-text">Matching Game</span>
+          </a>
+
+          <a href="https://lambent-speculoos-ab801b.netlify.app/" class="icon-button">
+            <i class="bi bi-mortarboard-fill"></i>
+            <span class="icon-button-text">Graduation Counter</span>
+          </a>
+        </div>
+      </div>
+
+      <i class="bi bi-cpu"></i>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="flex-row">
+      <i class="bi bi-tools"></i>
+      <div class="Overview-Career">
+        <h3>Expanded Career Highlights</h3>
+        <div class="Overview-details">
+          <div class="Overview-text">
+            <p>
+              My hands-on experience in construction didn’t just teach me physical labor—it instilled problem-solving
+              instincts, precision, and process awareness that carry over seamlessly into coding. Starting as a laborer,
+              I developed an eye for detail and a sense of how small actions ripple through larger systems. I learned to
+              approach tasks methodically, adapt when things didn’t go as planned, and remain flexible in high-pressure
+              situations. These habits now show up in my frontend workflow—whether I’m debugging layout bugs, organizing
+              components, or fine-tuning user interfaces with SCSS and Bootstrap.
+            </p>
+
+            <p>
+              Operating machinery sharpened my spatial awareness and strengthened my ability to plan workflows
+              efficiently—much like optimizing web performance or structuring DOM elements. Anticipating how the
+              movement of materials could affect a day’s outcome built strategic thinking I now rely on when managing
+              assets with tools like Vite or building responsive designs. As I stepped into leadership, communication
+              and team coordination became central. I didn’t just manage a crew—I learned how to sequence tasks, guide
+              different personalities toward a shared vision, and maintain clarity through shifting conditions. These
+              same principles shape how I wireframe user experiences and plan technical milestones, allowing me to blend
+              structure and creativity in both construction and code.
+            </p>
+          </div>
+
+          <img src="./images/IMG_3257.PNG" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <footer>
+    <p>Copyright Kerr 2025</p>
+    <a href="https://www.instagram.com/kkerr_25/"><img src="images/instagram (1).png" alt="" /></a>
+    <a href="https://www.facebook.com/profile.php?id=100009656614309"><img src="images/facebook.png" alt="" /></a>
+  </footer>
 </html>
