@@ -147,6 +147,7 @@ footer {
   border-radius: 1rem;
   max-width: 900px;
   margin: 2rem auto;
+  margin-bottom: 5rem !important;
   box-shadow: 4px 4px 12px #2c3e50;
   font-family: "Segoe UI", sans-serif;
   display: flex;
@@ -234,6 +235,7 @@ footer {
   }
 
   footer {
+    position: fixed;
     padding: 1rem;
     flex-direction: column;
 
