@@ -1,0 +1,251 @@
+/* Your styles go here */
+@import "bootstrap/scss/bootstrap.scss";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+$color-primary: #2c3e50; // Charcoal Blue
+$color-accent: #e67e22; // Burnt Orange
+$color-background: #f4f4f4; // light grey
+$color-text: #4b4b4b; // grey
+$color-highlight: #5da4a9; // teal
+$color-border: #1c1c1c; // graphite
+
+html {
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: $color-background;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: $color-border;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: auto;
+  padding-left: 2rem !important;
+}
+
+.nav-Header {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: $color-highlight;
+  margin: 0;
+  padding: 0.25rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  white-space: nowrap;
+  font-family: "Segoe UI", sans-serif;
+
+  border-bottom: 2px solid rgba($color-highlight, 0.2);
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  margin: 0rem 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links-text {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem; // spacing between icon and text
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  font-size: 1.25rem;
+  color: $color-background;
+  font-family: inherit;
+  line-height: 1;
+  transition: color 0.3s ease;
+
+  a {
+    margin: 0;
+    text-decoration: none;
+    color: $color-background;
+  }
+
+  a:hover {
+    color: $color-background;
+  }
+
+  svg,
+  i {
+    display: block;
+    font-size: 1rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 0%;
+    background-color: rgba($color-accent, 0.5) !important;
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 60%;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  background-color: $color-border;
+  color: #5da4a9;
+
+  p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  img {
+    max-width: 100px;
+    padding: 1.5rem;
+    margin-left: auto;
+    margin: 0;
+
+    &:hover {
+      cursor: pointer;
+      padding: 1rem;
+    }
+  }
+}
+
+@import "bootstrap/scss/bootstrap.scss";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+.contact-container {
+  margin-top: 7rem !important;
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  margin-bottom: 5rem !important;
+  box-shadow: 4px 4px 12px #2c3e50;
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    text-align: center;
+    color: #5da4a9;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid rgba(#5da4a9, 0.2);
+    padding-bottom: 0.5rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #4b4b4b;
+    }
+
+    input,
+    textarea {
+      padding: 0.75rem;
+      border: 1px solid #1c1c1c;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      background-color: #f4f4f4;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: #e67e22;
+        background-color: #fff;
+        box-shadow: 0 0 0 2px rgba(#e67e22, 0.2);
+      }
+    }
+
+    button {
+      padding: 1rem;
+      background-color: #e67e22;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #d35400;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .nav,
+  .nav-links,
+  .nav-links-text,
+  .image-header,
+  .profile-image,
+  .overlay-text,
+  .Previous-digital,
+  .flexbox-digital,
+  .digital-content,
+  .Case-study,
+  .Overview-Previous,
+  .Overview-Previous-Header,
+  .Portfolio-images,
+  .Overview-Career,
+  .Overview-details,
+  footer {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+  }
+
+  footer {
+    position: fixed;
+    padding: 1rem;
+    flex-direction: column;
+
+    img {
+      max-width: 80px;
+      padding: 1rem;
+    }
+  }
+
+  .about-header {
+    margin-top: 9rem;
+  }
+}
